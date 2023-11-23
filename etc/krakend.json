@@ -400,7 +400,7 @@
       "_comment": "Instructor 1: Retreive current enrollment for the classes.",
       "endpoint": "/api/classes/{class_id}/students/",
       "method": "GET",
-      "input_headers": ["x-cwid"],
+      "input_headers": ["x-cwid", "x-first-name", "x-last-name", "x-roles"],
       "backend": [
         {
           "url_pattern": "/classes/{class_id}/students/",
@@ -424,7 +424,12 @@
           "jwk_local_path": "./etc/public_key.json",
           "disable_jwk_security": true,
           "operation_debug": true,
-          "propagate_claims": [["jti", "x-cwid"]]
+          "propagate_claims": [
+            ["jti", "x-cwid"],
+            ["first_name", "x-first-name"],
+            ["last_name", "x-last-name"],
+            ["roles", "x-roles"]
+          ]
         }
       }
     },
@@ -432,7 +437,7 @@
       "_comment": "Instructor 2: etreive current waiting list for the class.",
       "endpoint": "/api/classes/{class_id}/waitlist/",
       "method": "GET",
-      "input_headers": ["x-cwid"],
+      "input_headers": ["x-cwid", "x-first-name", "x-last-name", "x-roles"],
       "backend": [
         {
           "url_pattern": "/classes/{class_id}/waitlist/",
@@ -456,7 +461,12 @@
           "jwk_local_path": "./etc/public_key.json",
           "disable_jwk_security": true,
           "operation_debug": true,
-          "propagate_claims": [["jti", "x-cwid"]]
+          "propagate_claims": [
+            ["jti", "x-cwid"],
+            ["first_name", "x-first-name"],
+            ["last_name", "x-last-name"],
+            ["roles", "x-roles"]
+          ]
         }
       }
     },
@@ -464,7 +474,7 @@
       "_comment": "Instructor 3: Retreive students who have dropped the class.",
       "endpoint": "/api/classes/{class_id}/droplist/",
       "method": "GET",
-      "input_headers": ["x-cwid"],
+      "input_headers": ["x-cwid", "x-first-name", "x-last-name", "x-roles"],
       "backend": [
         {
           "url_pattern": "/classes/{class_id}/droplist/",
@@ -488,7 +498,12 @@
           "jwk_local_path": "./etc/public_key.json",
           "disable_jwk_security": true,
           "operation_debug": true,
-          "propagate_claims": [["jti", "x-cwid"]]
+          "propagate_claims": [
+            ["jti", "x-cwid"],
+            ["first_name", "x-first-name"],
+            ["last_name", "x-last-name"],
+            ["roles", "x-roles"]
+          ]
         }
       }
     },
