@@ -8,6 +8,7 @@ from .models import Personnel, Settings
 from .Dynamo import DYNAMO_TABLENAMES
 from http import HTTPStatus
 import time
+from boto3.dynamodb.conditions import Key, Attr
 from fastapi.responses import JSONResponse
 
 

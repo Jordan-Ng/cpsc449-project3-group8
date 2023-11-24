@@ -8,7 +8,8 @@ DYNAMO_TABLENAMES = {
     "personnel" : "Personnel",
     "enrollment" : "Enrollment",
     "config" : "Config",
-    "waitlist_participation" : "Waitlist_Participation"
+    "waitlist_participation" : "Waitlist_Participation",
+    "droplist" : "Droplist"
 }
 
 class Dynamo:
